@@ -1,0 +1,18 @@
+[ERROR] 2021-06-30 16:44:19,005 __main__ <ipython-input-6-eab93999e09f>:9 페이지를 찾을 수 없습니다. (logging_example)
+[ERROR] 2021-06-30 16:44:19,016 __main__ <ipython-input-6-eab93999e09f>:14 요청 중에 예외가 발생했습니다: MissingSchema("Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?") (logging_example)
+Traceback (most recent call last):
+  File "<ipython-input-6-eab93999e09f>", line 12, in logging_example
+    r = requests.get('#invalid_url', timeout=1)
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\models.py", line 316, in prepare
+    self.prepare_url(url, params)
+  File "C:\Users\admin\anaconda3\lib\site-packages\requests\models.py", line 390, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '#invalid_url': No schema supplied. Perhaps you meant http://#invalid_url?
