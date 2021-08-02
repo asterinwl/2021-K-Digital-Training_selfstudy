@@ -1,0 +1,378 @@
+
+R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R은 자유 소프트웨어이며, 어떠한 형태의 보증없이 배포됩니다.
+또한, 일정한 조건하에서 이것을 재배포 할 수 있습니다.
+배포와 관련된 상세한 내용은 'license()' 또는 'licence()'을 통하여 확인할 수 있습니다.
+
+R은 많은 기여자들이 참여하는 공동프로젝트입니다.
+'contributors()'라고 입력하시면 이에 대한 더 많은 정보를 확인하실 수 있습니다.
+그리고, R 또는 R 패키지들을 출판물에 인용하는 방법에 대해서는 'citation()'을 통해 확인하시길 부탁드립니다.
+
+'demo()'를 입력하신다면 몇가지 데모를 보실 수 있으며, 'help()'를 입력하시면 온라인 도움말을 이용하실 수 있습니다.
+또한, 'help.start()'의 입력을 통하여 HTML 브라우저에 의한 도움말을 사용하실수 있습니다
+R의 종료를 원하시면 'q()'을 입력해주세요.
+
+> demo()
+
+이 코드를 치면 demo코드를 볼 수 있다.
+demo에는 여러가지 예시가 있으며, 해당되는 데모를 ()안에 넣으면 데모를 볼 수 있다.
+예를 들자면 demo package가 "Hi"라면 demo(Hi)로 데모를 볼 수 있다.
+R은 Enter을 통해서 넘어가기가 가능하다.
+
+> install.packages("googleVis")
+
+install.packages("googleVis")에서 경고가 발생했습니다 : 
+  'lib = "C:/Program Files/R/R-4.1.0/library"' is not writable
+--- 현재 세션에서 사용할 CRAN 미러를 선택해 주세요 ---
+‘jsonlite’(들)을 또한 설치합니다.
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/jsonlite_1.7.2.zip'을 시도합니다
+Content type 'application/zip' length 544251 bytes (531 KB)
+downloaded 531 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/googleVis_0.6.10.zip'을 시도합니다
+Content type 'application/zip' length 442986 bytes (432 KB)
+downloaded 432 KB
+
+package ‘jsonlite’ successfully unpacked and MD5 sums checked
+package ‘googleVis’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\admin\AppData\Local\Temp\RtmpM7y27z\downloaded_packages
+
+'googleVis' 이라는 packages를 까는 것이다.
+
+> df<-data.frame(country=c("KR","JP","CN"),cost1=c(11,16,19),cost2=c(28,14,37))
+
+> df
+  country cost1 cost2
+1      KR    11    28
+2      JP    16    14
+3      CN    19    37
+> 
+
+> install.packages("ggplot2")
+‘C:/Users/admin/Documents/R/win-library/4.1’의 위치에 패키지(들)을 설치합니다.
+(왜냐하면 ‘lib’가 지정되지 않았기 때문입니다)
+‘colorspace’, ‘cli’, ‘crayon’, ‘utf8’, ‘farver’, ‘labeling’, ‘lifecycle’, ‘munsell’, ‘R6’, ‘RColorBrewer’, ‘viridisLite’, ‘ellipsis’, ‘fansi’, ‘magrittr’, ‘pillar’, ‘pkgconfig’, ‘vctrs’, ‘digest’, ‘glue’, ‘gtable’, ‘isoband’, ‘rlang’, ‘scales’, ‘tibble’, ‘withr’(들)을 또한 설치합니다.
+
+
+  There is a binary version available but the source version is
+  later:
+       binary source needs_compilation
+pillar  1.6.1  1.6.2             FALSE
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/colorspace_2.0-2.zip'을 시도합니다
+Content type 'application/zip' length 2650069 bytes (2.5 MB)
+downloaded 2.5 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/cli_3.0.1.zip'을 시도합니다
+Content type 'application/zip' length 758600 bytes (740 KB)
+downloaded 740 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/crayon_1.4.1.zip'을 시도합니다
+Content type 'application/zip' length 141831 bytes (138 KB)
+downloaded 138 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/utf8_1.2.2.zip'을 시도합니다
+Content type 'application/zip' length 209802 bytes (204 KB)
+downloaded 204 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/farver_2.1.0.zip'을 시도합니다
+Content type 'application/zip' length 1751988 bytes (1.7 MB)
+downloaded 1.7 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/labeling_0.4.2.zip'을 시도합니다
+Content type 'application/zip' length 62808 bytes (61 KB)
+downloaded 61 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/lifecycle_1.0.0.zip'을 시도합니다
+Content type 'application/zip' length 111111 bytes (108 KB)
+downloaded 108 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/munsell_0.5.0.zip'을 시도합니다
+Content type 'application/zip' length 244923 bytes (239 KB)
+downloaded 239 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/R6_2.5.0.zip'을 시도합니다
+Content type 'application/zip' length 84127 bytes (82 KB)
+downloaded 82 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/RColorBrewer_1.1-2.zip'을 시도합니다
+Content type 'application/zip' length 55593 bytes (54 KB)
+downloaded 54 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/viridisLite_0.4.0.zip'을 시도합니다
+Content type 'application/zip' length 1299479 bytes (1.2 MB)
+downloaded 1.2 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/ellipsis_0.3.2.zip'을 시도합니다
+Content type 'application/zip' length 49167 bytes (48 KB)
+downloaded 48 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/fansi_0.5.0.zip'을 시도합니다
+Content type 'application/zip' length 248766 bytes (242 KB)
+downloaded 242 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/magrittr_2.0.1.zip'을 시도합니다
+Content type 'application/zip' length 236085 bytes (230 KB)
+downloaded 230 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/pkgconfig_2.0.3.zip'을 시도합니다
+Content type 'application/zip' length 22423 bytes (21 KB)
+downloaded 21 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/vctrs_0.3.8.zip'을 시도합니다
+Content type 'application/zip' length 1251939 bytes (1.2 MB)
+downloaded 1.2 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/digest_0.6.27.zip'을 시도합니다
+Content type 'application/zip' length 268473 bytes (262 KB)
+downloaded 262 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/glue_1.4.2.zip'을 시도합니다
+Content type 'application/zip' length 154956 bytes (151 KB)
+downloaded 151 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/gtable_0.3.0.zip'을 시도합니다
+Content type 'application/zip' length 433949 bytes (423 KB)
+downloaded 423 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/isoband_0.2.5.zip'을 시도합니다
+Content type 'application/zip' length 2726733 bytes (2.6 MB)
+downloaded 2.6 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/rlang_0.4.11.zip'을 시도합니다
+Content type 'application/zip' length 1182535 bytes (1.1 MB)
+downloaded 1.1 MB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/scales_1.1.1.zip'을 시도합니다
+Content type 'application/zip' length 563467 bytes (550 KB)
+downloaded 550 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/tibble_3.1.3.zip'을 시도합니다
+Content type 'application/zip' length 835410 bytes (815 KB)
+downloaded 815 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/withr_2.4.2.zip'을 시도합니다
+Content type 'application/zip' length 212640 bytes (207 KB)
+downloaded 207 KB
+
+URL 'https://cloud.r-project.org/bin/windows/contrib/4.1/ggplot2_3.3.5.zip'을 시도합니다
+Content type 'application/zip' length 4127811 bytes (3.9 MB)
+downloaded 3.9 MB
+
+package ‘colorspace’ successfully unpacked and MD5 sums checked
+package ‘cli’ successfully unpacked and MD5 sums checked
+package ‘crayon’ successfully unpacked and MD5 sums checked
+package ‘utf8’ successfully unpacked and MD5 sums checked
+package ‘farver’ successfully unpacked and MD5 sums checked
+package ‘labeling’ successfully unpacked and MD5 sums checked
+package ‘lifecycle’ successfully unpacked and MD5 sums checked
+package ‘munsell’ successfully unpacked and MD5 sums checked
+package ‘R6’ successfully unpacked and MD5 sums checked
+package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+package ‘viridisLite’ successfully unpacked and MD5 sums checked
+package ‘ellipsis’ successfully unpacked and MD5 sums checked
+package ‘fansi’ successfully unpacked and MD5 sums checked
+package ‘magrittr’ successfully unpacked and MD5 sums checked
+package ‘pkgconfig’ successfully unpacked and MD5 sums checked
+package ‘vctrs’ successfully unpacked and MD5 sums checked
+package ‘digest’ successfully unpacked and MD5 sums checked
+package ‘glue’ successfully unpacked and MD5 sums checked
+package ‘gtable’ successfully unpacked and MD5 sums checked
+package ‘isoband’ successfully unpacked and MD5 sums checked
+package ‘rlang’ successfully unpacked and MD5 sums checked
+package ‘scales’ successfully unpacked and MD5 sums checked
+package ‘tibble’ successfully unpacked and MD5 sums checked
+package ‘withr’ successfully unpacked and MD5 sums checked
+package ‘ggplot2’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\admin\AppData\Local\Temp\RtmpM7y27z\downloaded_packages
+소스형태의 패키지 ‘pillar’(들)를 설치합니다.
+
+URL 'https://cloud.r-project.org/src/contrib/pillar_1.6.2.tar.gz'을 시도합니다
+Content type 'application/x-gzip' length 1130321 bytes (1.1 MB)
+downloaded 1.1 MB
+
+* installing *source* package 'pillar' ...
+** package 'pillar' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+  converting help for package 'pillar'
+    finding HTML links ... done
+    align                                   html  
+    char                                    html  
+    colonnade                               html  
+    ctl_new_pillar                          html  
+    deprecated                              html  
+    dim_desc                                html  
+    expect_known_display                    html  
+    extra_cols                              html  
+    format_glimpse                          html  
+    format_tbl                              html  
+    format_type_sum                         html  
+    get_extent                              html  
+    glimpse                                 html  
+    new_ornament                            html  
+    finding level-2 HTML links ... done
+
+    new_pillar                              html  
+    new_pillar_component                    html  
+    new_pillar_shaft                        html  
+    new_pillar_title                        html  
+    new_pillar_type                         html  
+    new_tbl_format_setup                    html  
+    num                                     html  
+    pillar-package                          html  
+    pillar                                  html  
+    pillar_options                          html  
+    pillar_shaft                            html  
+    squeeze                                 html  
+    style_subtle                            html  
+    tbl_format_body                         html  
+    tbl_format_footer                       html  
+    tbl_format_header                       html  
+    tbl_format_setup                        html  
+    tbl_sum                                 html  
+    type_sum                                html  
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+*** arch - i386
+*** arch - x64
+** testing if installed package can be loaded from final location
+*** arch - i386
+*** arch - x64
+** testing if installed package keeps a record of temporary installation path
+* DONE (pillar)
+
+The downloaded source packages are in
+        ‘C:\Users\admin\AppData\Local\Temp\RtmpM7y27z\downloaded_packages’
+
+> library(googleVis)
+
+Creating a generic function for ‘toJSON’ from package ‘jsonlite’ in package ‘googleVis’
+
+Welcome to googleVis version 0.6.10
+
+Please read Google's Terms of Use
+before you start using the package:
+https://developers.google.com/terms/
+
+Note, the plot method of googleVis will by default use
+the standard browser to display its output.
+
+See the googleVis package vignettes for more details,
+or visit https://github.com/mages/googleVis.
+
+To suppress this message use:
+suppressPackageStartupMessages(library(googleVis))
+
+library(googleVis)를 언급해야지 라이브러리 안에 있는 코드를 직접 쓸 수 있다.
+따라서 library를 꼭 언급해야된다.
+
+> Line<-gvisLineChart(df)
+경고메시지(들): 
+type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+
+df를 선차트 형식으로 만들기
+
+> plot(Line)
+starting httpd help server ... done
+
+Line을 그래프 형식으로 보여주기
+
+> Line5<-gvisLineChart(df,"country",c("cost1","cost2"),
++ options=list(gvis.editor="Edit me!"));
+경고메시지(들): 
+type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+
+df를 선차트 형식으로 만들기
+
+> plot(Line5)
+
+Line5를 그래프 형식으로 보여주기
+
+> popu=data.frame(area=c("Gyeongggi-do","Gangwon-do","Chungcheongnam-do",
++ "chungcheongbuk-do","Gyeongsangnam-do","Gyeongsangbuk-do",
++ "Jeollanam-do","Jeollabuk-do","Jejy-do"),
++ population=c(1280,155,212,159,338,269,190,185,650));
+
+> popu
+               area population
+1      Gyeongggi-do       1280
+2        Gangwon-do        155
+3 Chungcheongnam-do        212
+4 chungcheongbuk-do        159
+5  Gyeongsangnam-do        338
+6  Gyeongsangbuk-do        269
+7      Jeollanam-do        190
+8      Jeollabuk-do        185
+9           Jejy-do        650
+
+> pie<-gvisPieChart(popu)
+경고메시지(들): 
+type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+
+popu를 pie차트 형식으로 보여주기
+
+> plot(pie)
+
+pie를 파이차트 형식으로 보여주기
+
+> Gauge<-gvisGauge(popu,
++ option=list(min=0,max=800,greeFrom=500,greenTo=800,yellowFrom=300,
++ yellowTo=500,redFrom=0,redTo=300,width=400,height=300));
+11건의 경고들이 발견되었습니다 (이를 확인하기 위해서는 warnings()를 이용하시길 바랍니다).
+
+> plot(Gauge)
+
+> Intencity<-gvisintencityMap(df)
+gvisintencityMap(df)에서 다음과 같은 에러가 발생했습니다:
+  함수 "gvisintencityMap"를 찾을 수 없습니다
+
+함수 "gvisintencityMap"는 과거에 있었는데 지금 사라졌다 ㅠㅠ
+
+> setwd("c:/temp")
+
+파일이 지정되어 있는 곳을 알려준다.
+c드라이브 밑의 temp에 있다.
+
+> df<-read.csv("total.csv",header=T)
+
+header는 열의 이름이며 T는 열의 이름을 포함하겠다는 의미이다.
+
+> df$date <- as.Date(df$date,format="%Y-%m-%d")
+
+> Cal <-gvisCalendar(df, datevar="date", numvar="maxtemp", 
+options=list(title="Daily temperature in Seoul",height=600, 
+width=1000,calendar="{yearLabel:{fontName:'Times-Roman',fontSize:32,
+color:'#1A8763',bold:true},cellsize:10, cellColor:{stroke:'red',
+strokeOpacity:0.2},focusedCellColor:{stroke:'red'}}"))
+
+경고메시지(들): 
+1: type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+2: type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+3: type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+4: type.convert.default(gsub("px", "", options[[x]]))에서:
+  'as.is' should be specified by the caller; using TRUE
+
+> plot(Cal)
+
+> save.image("C:\\Users\\admin\\Desktop\\datastudy\\day52\\R_practice")
