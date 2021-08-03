@@ -1,0 +1,39 @@
+install.packages('rJava')
+install.packages('memoise')
+install.packages('multilinguer')
+install.packages('remotes')
+remotes::install_github('haven-jeon/KoNLP', upgrage='never', INSTALL_opts=c('--no-multiarch'))
+2021년부터 KoNLP를 지원하지 않는다. 따라서 위의 코드처럼 작성해야지 KoNLP 패키지가 다운이 가능하다.
+
+
+install.packages('wordcloud')
+wordcloud 패키지가 다운
+
+library('KoNLP')
+library('wordcloud')
+library를 지정해주어야지 해당 패키지를 사용할 수 있다.
+
+setwd("c:/temp")
+c드라이브 밑의 temp 폴더로 위치를 지정한다.
+
+txt <- readLines("R_TMP.txt")
+txt에 R_TMP를 읽는 형식으로 넣겠다.
+
+noun <- sapply(txt,extractNoun,USE.NAMES=F) 
+Noun 즉 명사꼴로 txt를 조정하겠다.
+
+head(unlist(noun),50)
+noun 50개 뽑기
+
+write (unlist(noun), "R_TMP.txt")
+kim <- read.table("R_TMP.txt")
+nrow(kim)
+words <- table(kim)
+
+library(RColorBrewer)
+
+palete <- brewer.pal(5,"Set1")
+색상을 설정하기 위한 함수
+
+wordcloud(names(words),freq=words,scale=c(10,0,10),rot.per=0.5,min.freq=1, random.order=F,random.color=T,colors=palete)
+이것을 작성하면 최종결과가 나옴
