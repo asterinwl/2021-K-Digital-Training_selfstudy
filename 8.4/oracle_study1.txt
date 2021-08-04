@@ -1,0 +1,32 @@
+drop table dept;
+create table dept(  
+  deptno     int,  
+  dname      varchar(14),  
+  loc        varchar(13),  
+  constraint pk_dept primary key (deptno)
+);
+
+
+drop table emp;
+create table emp(  
+  empno    int,  
+  ename    varchar(10),  
+  job      varchar(9),  
+  mgr      int,  
+  hiredate date,  
+  sal      int,  
+  comm     int,
+  deptno   int,  
+  constraint pk_emp primary key (empno),  
+  constraint fk_deptno foreign key (deptno) references dept (deptno));
+
+insert into dept(deptno, dname, loc) values(10,'sales','seoul') ;
+insert into dept(deptno, dname, loc) values(20,'hr','daejeon') ;
+insert into dept(deptno, dname, loc) values(30,'service','pusan') ;
+insert into dept(deptno, dname, loc) values(40,'research','jeju') ;
+insert into emp values(1001,'gates','chairman',null,'19771117',5000,null,10) ;
+insert into emp values(1204,'sunny','manager',1001,'19890923',4100,null,20) ;
+insert into emp values(1321, 'jone', 'manager', 1001, '19900301', 3800, null, 30) ;
+insert into emp values(2034, 'martin', 'member', 1321, '19970513',4000, null, 30) ; 
+
+
